@@ -146,8 +146,6 @@ button {
 
 }
 
-
-
 .header-item.current > .header-link::after {
     content: '';
     position: absolute;
@@ -168,6 +166,15 @@ button {
 
 .header-link.current {
     color: var(--hover-focus-color); 
+}
+
+.menu-hamburger-btn {
+    display: flex;
+}
+
+.icon-menu-hamburger {
+    fill: #000000;
+
 }
 
 .contacts-email,

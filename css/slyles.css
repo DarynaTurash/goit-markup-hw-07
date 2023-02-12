@@ -51,8 +51,8 @@ ul {
 }
 
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 img {
@@ -125,7 +125,6 @@ button {
 
 }
 
-
 .contacts-email,
 .contacts-phone {
     display: none;
@@ -136,7 +135,6 @@ button {
 
 
 /* hero */
-
 
 .section-hero {
     padding-top: 112px;
@@ -197,95 +195,57 @@ button {
 }
 
 /* values */
+
 .values-list {
     display: flex;
     flex-wrap: wrap;
-    }
+    gap: 24px;
+    }   
 
 .values-icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 264px;
-    height: 112px;
-    margin-bottom: 8px; 
-    
-    background: #F4F4FD;
-    border-radius: 4px;
-}    
-
-
+    display: none;
+}
 
 .values-item {
-    width: calc((100% - 72px) / 4);
+    width: 100%;
+
+    margin-bottom: 72px;
 }
 
-.values-item:not(:nth-child(4n)) {
-    margin-right: 24px;
-}
 
 .values-subtitle {
     margin-bottom: 8px;
 
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
     letter-spacing: 0.02em;
 
     color: var(--header-text);
 }
 
 .values-text {
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
 /* services */
-.section.services {
-    padding-top: 0;
-
-}
-
-.services-title {
-    margin-bottom: 72px; 
-
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.1;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-
-    color: var(--header-text);
-
-}
-
-.services-list {
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
-.services-item:not(:nth-child(3n)) {
-    margin-right: 24px;
-}
-
-.secvices-list > .services-item {
-    flex-basis: calc(100% / 4 - 24px);
-}
-
-.services-img {
-
+.section.section-services {
+    display: none;
 }
 
 /* team */
-.team {
-background-color: var(--light-background);
+
+.section-team {
+    background-color: var(--light-background);
 }
 
-.team-container {
-    margin-right: auto;
+
+.team-container.container-mini {
+    width: 296px;
 }
 
 .team-title {
@@ -305,11 +265,11 @@ background-color: var(--light-background);
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
 }
 
 .team-member {
-    width: calc((100% - 72px) / 4);
+    width: 100%;
+    margin-bottom: 72px;
 
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -343,9 +303,7 @@ background-color: var(--light-background);
 
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
-
 
 .socnetwork-link:hover,
 .socnetwork-link:focus {
@@ -353,9 +311,8 @@ background-color: var(--light-background);
     border-radius: 50%;
 }
 
-
-
 .team-member-photo {
+    width: 100%;
 
 }
 
@@ -387,6 +344,7 @@ background-color: var(--light-background);
 }
 
 /* customers  */
+
 .customers-title {
     margin-bottom: 72px;
 
@@ -403,13 +361,14 @@ background-color: var(--light-background);
 
 .customers-list {
     display: flex;
-    gap: 24px;
-    justify-content: center;
-    align-content: center;
+    row-gap: 72px;
+    column-gap: 16px;
+    
+    flex-wrap: wrap;
 }
 
 .customers-item {
-    width: calc((100% - 120px) / 6);
+    width: calc((100% - 16px) / 2);
     height: 88px;
     }
 
@@ -422,16 +381,12 @@ background-color: var(--light-background);
     border-radius: 4px;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    
 }
 
 .customers-icon {
     fill: var(--helper-text);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 
 .client-link:is(:hover, :focus) {
     border-color: var(--hover-focus-color);
@@ -442,19 +397,20 @@ background-color: var(--light-background);
     }
 
 /* footer */
-.footer {
+.section-footer {
 background-color: var(--overlays-shadows-headings);
 }
 
-.section.footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+.footer-content {
+    margin-bottom: 72px;
 }
 
 .footer-logo {
-    display: inline-block;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
     margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
 
     font-family: 'Raleway';
     font-weight: 800;
@@ -466,17 +422,18 @@ background-color: var(--overlays-shadows-headings);
 }
 
 .footer-text {
+    margin-left: auto;
     margin-right: auto;
-    max-width: 264px;
+    max-width: 268px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-
+    
     color: #E7E9FC;
 }
 
 .footer-socnetworks {
-    margin-right: 80px;
+    margin-bottom: 72px;
 }
 
 .socnetworks-title {
@@ -484,6 +441,7 @@ background-color: var(--overlays-shadows-headings);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
 
     margin-bottom: 16px;
 
@@ -492,6 +450,7 @@ background-color: var(--overlays-shadows-headings);
 
 .socnetwork-list-footer {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 16px;
 
@@ -516,14 +475,6 @@ background-color: var(--overlays-shadows-headings);
     border-radius: 50%;
 }
 
-.footer-container {
-    display: flex;
-    align-items: baseline;
-}
-
-.footer-content {
-    margin-right: 120px;
-}
 
 /* footer-form */
 
@@ -532,6 +483,7 @@ background-color: var(--overlays-shadows-headings);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
 
     margin-bottom: 16px;
 
@@ -540,17 +492,14 @@ background-color: var(--overlays-shadows-headings);
 
 .input-field {
     position: relative;
-
-    display: flex;
-    gap: 24px;
-
 }
 
-
-
 .button-subscribe {
+    display: block;
     position: relative;
 
+    margin-left: auto;
+    margin-right: auto;
     min-width: 165px;
     padding: 8px 24px;
 
@@ -583,14 +532,19 @@ background-color: var(--overlays-shadows-headings);
 }
 
 .subscribe-input {
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    height: 40px;
+    width: 100%;
+
     color: rgba(255, 255, 255, 0.6);
     font-size: 12px;
     line-height: 2;
-    margin: 0;
-    padding: 8px 16px;
-    height: 40px;
-    width: 264px;
-    
+
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));

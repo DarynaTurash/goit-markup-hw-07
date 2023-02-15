@@ -33,7 +33,7 @@
                         </li>
                 </ul>
         </nav>
-        <button type="button" class="button menu-hamburger-btn" data-menu-open>
+        <button type="button" class="button menu-hamburger-btn js-open-menu">
             <svg class="icon-menu-hamburger" width="32" height="22">
                 <use href="./images/symbol-defs.svg#icon-menu-hamburger"></use>
             </svg>
@@ -51,9 +51,9 @@
         </address>
         </div>
 
-        <div class="mobile-menu is-opened" data-menu>
+        <div class="mobile-menu js-menu-container">
             <div class="container-mobile-menu">
-                <button type="button" class="mobile-menu-button-close button" data-menu-close>
+                <button type="button" class="mobile-menu-button-close button js-close-menu">
                     <svg class="modal-icon-exit icon" width:="8" height="8">
                         <use href="./images/symbol-defs.svg#icon-modal-exit"></use>
                     </svg>
@@ -628,6 +628,6 @@
 </div>
 
 <script src="./js/modal.js"></script>
-<script src="./js/menu.js"></script>
+<script defer src="./js/menu.js"></script>
 </body>
 </html>

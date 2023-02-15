@@ -6,4 +6,16 @@
     .team-container-mini {
     width: 296px;
 }
+
+
+@media screen and (min-width: 428px ) {
+    .modal {
+        width: 392px;
+    }
+
+    .socnetwork-list-mobile-menu {
+    gap: 56px;
+}
+}
+
 }

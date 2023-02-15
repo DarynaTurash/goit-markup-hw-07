@@ -31,6 +31,12 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
 ul {
     margin: 0;
     padding-left: 0;
@@ -59,6 +65,10 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .visually-hidden {
@@ -117,18 +127,149 @@ button {
 .menu-hamburger-btn {
     display: block;
     margin-left: auto;
+    background-color: transparent;
 }
 
 
 .icon-menu-hamburger {
     fill: #000000;
-
 }
+
 
 .contacts-email,
 .contacts-phone {
     display: none;
 }
+
+/* mobile-menu */
+
+.container-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 40px 40px 40px;
+}
+
+.mobile-menu-container-contacts-soc {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #FFFFFF;
+
+    transform: translateY(100%);
+}
+
+.mobile-menu.is-opened {
+    transform: translateY(0);
+}
+
+.mobile-menu-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    color: var(--header-text);
+}
+
+.mobile-menu-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mobile-menu-link:active {
+    color: var(--hover-focus-color);
+}
+
+.socnetwork-list-mobile-menu {
+    display: flex;
+    gap: 17%;
+}
+
+.socnetwork-link-mobile-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    background-color: var(--acent-color);
+    border-radius: 50%;
+}
+
+.mobile-menu-button-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--sutle-backgrounds);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-button-close:is(:hover, :focus) {
+    background-color: var(--hover-focus-color);
+    border: 1px solid var(--hover-focus-color);
+}
+
+.mobile-menu-contact-phone {
+    display: inline-block;
+    margin-bottom: 40px;
+
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+
+    color: var(--acent-color);
+}
+
+.mobile-menu-contact-email {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    color: var(--main-text);
+}
+
+@media screen  and (max-width: 418px) {
+
+    .mobile-menu-contact-phone {
+        font-size: 24px; 
+    }
+
+
+    .mobile-menu-link {
+    font-size: 30px;
+}
+
+.mobile-menu-contact-email {
+        font-size: 15px;
+}
+    
+}
+
+
 
 
 
@@ -288,10 +429,6 @@ button {
     gap: 24px;
 }
 
-.socnetwork-item {
-    background-color: var(--acent-color);
-    border-radius: 50%;
-}
 
 .socnetwork-link {
     display: flex;
@@ -300,6 +437,8 @@ button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    
+    background-color: var(--acent-color);
 
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -557,8 +696,6 @@ background-color: var(--overlays-shadows-headings);
     outline: none;
 }
 
-
-
 /* portfolio */
 
 .header-portfolio {
@@ -719,27 +856,29 @@ margin-bottom: 72px;
     background: rgba(46, 47, 66, 0.4);
     top: 0;
     left: 0;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
 
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    overflow-y: scroll;
+
 }
 
 .backdrop.is-hidden > .modal {
-    transform: scale(0.8) translate(-50%, -50%);
+    transform: scale(0.8);
     visibility: hidden;
     }
 
 .modal {
-    position: absolute;
-    left: 50%;
-    top: 50%;
     visibility: visible;
 
-    padding: 72px 24px 24px 24px;
-    min-width: 408px;
+    padding: 72px 16px 24px 16px;
+    margin-top: 96px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 92%;
     min-height: 576px;
     
 
@@ -747,8 +886,8 @@ margin-bottom: 72px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transform: scale(1) translate(-50%, -50%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button-exit {
@@ -787,14 +926,13 @@ margin-bottom: 72px;
 }
 
 
-.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
-
 
 /* form-registration */
+.form-registration {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .registration-title {
     margin-bottom: 16px;
@@ -808,14 +946,12 @@ margin-bottom: 72px;
     color: var(--overlays-shadows-headings);
 }
 
-
-
 .registration-input {
     display: block;
 
     padding: 11px 16px 11px 38px;
 
-    width: 360px;
+    width: 100%;
     height: 40px;
     font-weight: 400;
     font-size: 12px;
@@ -828,7 +964,6 @@ margin-bottom: 72px;
 
 .registration-label {
     display: block;
-    
     margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
@@ -859,7 +994,7 @@ margin-bottom: 72px;
 .registration-input.comment {
     padding: 8px 16px 8px 16px;
     
-    width: 360px;
+    width: 100%;
     height: 120px;
     font-weight: 400;
     font-size: 12px;
@@ -887,6 +1022,7 @@ margin-bottom: 72px;
     clip: rect(0 0 0 0);
 }
 
+
 .label-acception {
     font-weight: 400;
     font-size: 12px;
@@ -910,6 +1046,29 @@ margin-bottom: 72px;
     color: #4D5AE5;
     margin-left: 5px;
 }
+
+@media screen and (max-width: 372px) {
+
+    .label-acception {
+        font-size: 9px;
+    }
+
+    .policy-information {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .label-acception {
+        font-size: 8px;
+    }
+
+    .policy-information {
+        font-size: 8px;
+    }
+}
+
 
 .label-acception {
     display: flex;

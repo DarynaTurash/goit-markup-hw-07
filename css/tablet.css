@@ -102,6 +102,10 @@ color: var(--hover-focus-color);
     display: none;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 /* hero */
 
 .hero-title {
@@ -193,4 +197,9 @@ color: var(--hover-focus-color);
     gap: 24px;
 }
 
+/* modal */
+
+.modal {
+    max-width: 408px;
+}
 }

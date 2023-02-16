@@ -35,6 +35,19 @@
 
 /* hero */
 
+.section-hero {
+    background-image: var(--gradient-hero), url(../images/hero-tablet-img1x.jpg);
+    background-position: center;
+}
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-wrap {
+        background-image: var(--gradient-hero), url(../images/hero-tablet-img2x.jpg);
+    }
+}
+
 .hero-title {
     margin-bottom: 48px;
 }

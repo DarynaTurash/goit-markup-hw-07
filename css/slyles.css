@@ -10,6 +10,7 @@
     --sutle-backgrounds: #E7E9FC;
     --helper-text: #8E8F99;
     --valid-fields: #31D0AA;
+    --gradient-hero: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 
 }
 
@@ -272,26 +273,28 @@ button {
     
 }
 
-
-
-
-
-
-
 /* hero */
 
 .section-hero {
     padding-top: 112px;
     padding-bottom: 112px;
     background-color: var(--overlays-shadows-headings);
-    max-width: 768px;
+
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/header-image.jpeg);
+    background-image: var(--gradient-hero),
+    url(../images/hero-img1x.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
+    background-size: cover;
+    
+}
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .section-hero {
+            background-image: var(--gradient-hero), url(../images/hero-img2x.jpg);
+        }
 }
 
 

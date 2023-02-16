@@ -108,6 +108,18 @@ color: var(--hover-focus-color);
 
 /* hero */
 
+.section-hero {
+    background-image: var(--gradient-hero), url(../images/hero-tablet-img1x.jpg);
+}
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-hero {
+        background-image: var(--gradient-hero), url(../images/hero-tablet-img2x.jpg);
+    }
+}
+
 .hero-title {
     margin-bottom: 40px;
     max-width: 497px;

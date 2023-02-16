@@ -1053,6 +1053,17 @@ margin-bottom: 72px;
     margin-left: 5px;
 }
 
+@media screen and (max-width: 404px) {
+
+    .label-acception {
+        font-size: 10px;
+    }
+
+    .policy-information {
+        font-size: 10px;
+    }
+}
+
 @media screen and (max-width: 372px) {
 
     .label-acception {

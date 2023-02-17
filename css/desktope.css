@@ -198,36 +198,9 @@
 }
 
 /* modal */
-.backdrop {
-    overflow-y: hidden;
-    
-    opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.backdrop.is-hidden > .modal {
-    transform: scale(0.8) translate(-50% , -50%);
-    visibility: hidden;
-    }
-
-.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 408px;
-
-    transform: scale(1) translate(-50% , -50%);
-
-    margin: 0;
-    transition: transform 250ms cubic-bezier(0.4, 0 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 80px;
 }
-
 
 }

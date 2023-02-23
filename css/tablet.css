@@ -215,4 +215,34 @@ color: var(--hover-focus-color);
     padding: 72px 24px 24px 24px;
     width: 408px;
 }
+
+/* portfolio */
+.section-works {
+    padding-top: 64px;
+    padding-bottom: 96px;
+
+}
+
+.works-cards {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+}
+
+.works-list {
+    justify-content: center;
+    margin-bottom: 64px;
+    padding-right: 0;
+    }
+
+.works-btn {
+    padding: 12px 24px;
+}
+
+.card {
+    width: calc((100% - 24px) / 2);
+    margin: 0;
+}
+
 }

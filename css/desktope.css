@@ -203,4 +203,24 @@
     top: 80px;
 }
 
+/* portfolio */
+.section-works {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.works-list {
+    justify-content: center;
+    margin-bottom: 72px;
+    padding-right: 0;
+    }
+
+
+.card {
+    width: calc((100% - 48px) / 3);
+}
+
+.works-cards {
+    row-gap: 40px;
+}
 }
